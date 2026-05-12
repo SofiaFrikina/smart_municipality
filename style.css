@@ -1,0 +1,920 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #f5f7fa;
+}
+
+.container {
+  display: flex;
+}
+
+.container-kpi {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.container-kpi h3 {
+  font-size: 23px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #2F80ED;
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.2)
+}
+
+.sidebar .active {
+  background: rgba(255,255,255,0.3);
+  border-radius: 8px;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+  height: 100%;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.topbar-gen {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+
+
+
+.topbar h1 {
+  margin: 0;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  flex: 1;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  min-width: 200px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+/* Chart */
+.chart {
+  padding: 5px 5px 15px 5px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  
+}
+
+.fake-chart {
+  height: 150px;
+  background: linear-gradient(to top, #2F80ED, #56CCF2);
+  border-radius: 10px;
+}
+
+/* Table */
+.table-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+
+.ok {
+  color: green;
+}
+
+.bad {
+  color: red;
+}
+
+/* Контейнер */
+.kpi-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Заголовок */
+.kpi-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Таблица */
+.kpi-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Заголовки */
+.kpi-table th {
+  background: #2F80ED;
+  color: white;
+  text-align: left;
+  padding: 12px;
+}
+
+/* Ячейки */
+.kpi-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Чередование строк */
+.kpi-table tr:nth-child(even) {
+  background: #f9fbfd;
+}
+
+/* Выравнивание чисел */
+.kpi-table td:nth-child(2),
+.kpi-table td:nth-child(3),
+.kpi-table td:nth-child(4),
+.kpi-table th:nth-child(2),
+.kpi-table th:nth-child(3),
+.kpi-table th:nth-child(4) {
+  text-align: center;
+}
+
+/* Цвета коэффициента */
+.good {
+  color: green;
+  font-weight: bold;
+}
+
+.big {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.bad {
+  color: red;
+  font-weight: bold;
+}
+
+/* Контейнер */
+.pie-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Круг */
+.pie-chart {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #2F80ED 0% 18%,
+    #27ae60 18% 38%,
+    #56CCF2 38% 52%,
+    #e74c3c 52% 59%,
+    #f39c12 59% 67%,
+    #9b59b6 67% 74%,
+    #34495e 74% 81%,
+    #16a085 81% 90%,
+    #c0392b 90% 100%
+  );
+}
+
+/* Легенда */
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Цветные квадраты */
+.legend span {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.c1 { background: #2F80ED; }
+.c2 { background: #27ae60; }
+.c3 { background: #56CCF2; }
+.c4 { background: #e74c3c; }
+.c5 { background: #f39c12; }
+.c6 { background: #9b59b6; }
+.c7 { background: #34495e; }
+.c8 { background: #16a085; }
+.c9 { background: #c0392b; }
+
+/* Контейнер */
+.gauge-container {
+  margin-top: 20px;
+}
+
+/* Шкала */
+.gauge-bar {
+  height: 30px;
+  background: #e0e6ed;
+  border-radius: 20px;
+  position: relative;
+}
+
+/* Заполнение */
+.gauge-fill {
+    position: absolute;
+    top: 0;
+  height: 100%;
+  width: 79%;
+  background: linear-gradient(to right, #27ae60, #2ecc71);
+  border-radius: 20px;
+  z-index: 1;
+  transition: 1s ease;
+}
+
+.gauge-fill-2 {
+    position: absolute;
+    top: 0;
+  height: 100%;
+  width: 80%;
+  transition: 1s ease;
+  z-index: 2;
+  border-right: 2px solid black;
+}
+
+/* Значение */
+.gauge-value {
+    position: absolute;
+    left: 68%;
+    top: -4px;
+    overflow: visible;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.gauge-value-2 {
+    position: absolute;
+    left: 77%;
+    top: 28px;
+    overflow: visible;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.map-image {
+    height: 400px;
+    width: 400px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Контейнер */
+.donut-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Круг */
+.donut {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  position: relative;
+
+  background: conic-gradient(
+    #27ae60 0% 27.2%,   /* решено */
+    #e0e6ed 27.2% 100% /* остальное */
+  );
+}
+
+/* Внутренний круг */
+.donut::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Центр */
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+/* Процент */
+.percent {
+  font-size: 28px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* Подпись */
+.text {
+  font-size: 13px;
+  color: #555;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  gap: 30px;
+}
+
+.chart-r {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.card-r {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 95px;
+  align-self: center;
+}
+
+.card-r h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.rating-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+
+
+.rating-table-gen {
+  box-shadow: 6px 6px 8px grey;
+  border-radius: 12px;
+  width: 100%;
+  flex: 1;
+  max-height: 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  
+}
+
+
+
+.rating-table th {
+  background: #2f81ed;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.rating-table-gen tr th {
+  background: rgba(128, 128, 128, .4);
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+}
+
+.rating-table-gen tr td {
+  padding: 5px 6px;
+  text-align: center;
+}
+
+.rating-table tr th {
+font-size: 18px;
+}
+
+.rating-table td {
+ padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.rating-table tr:nth-child(even) {
+  background: #f9fbfd;
+}
+
+/* Выделение топ-3 */
+.rating-table tr:nth-child(2) td {
+  font-weight: bold;
+}
+
+.rating-table tr:nth-child(3) td {
+  font-weight: bold;
+}
+
+.rating-table tr:nth-child(4) td {
+  font-weight: bold;
+}
+
+ .container-cont {
+        display: flex;
+        flex-direction: column;
+        flex: 4;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .container-mini {
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .container-cont h1 {
+        color: #333;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    
+
+    .section h2 {
+        color: #2c3e50;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: #0077cc;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .section_social {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .address {
+        background: #f0f4f8;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .gosuslugi {
+      width: 85px;
+      height: 85px;
+    }
+
+    .vk {
+      width: 85px;
+      height: 85px;
+    }
+
+    .odn {
+      width: 60px;
+      height: 60px;
+    }
+.filters {
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}  
+
+.filter-bar {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.filter-bar select{
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.filter-bar select option {
+  cursor: pointer;
+}
+
+.chart1 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  gap: 15px;
+  box-shadow: 6px 6px 8px grey;
+  justify-content: center;
+}
+
+.chart2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 4;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  padding: 15px 0 10px 0;
+  gap: 10px;
+  box-shadow: 6px 6px 8px grey;
+}
+
+.chart3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 3;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  padding: 15px 0 10px 0;
+  gap: 10px;
+  box-shadow: 6px 6px 8px grey;
+}
+
+.chart3 h3 {
+  padding: 0;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+.chart2 h3 {
+  padding: 0;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+.chart1 h3 {
+  padding: 0;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Контейнер */
+.bar-chart {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  height: 200px;
+  
+}
+
+.bar-chart2 {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  height: 100px;
+  
+}
+
+/* Группа (1 категория) */
+.group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  
+}
+
+/* Два столбца */
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 100%;
+}
+
+/* Столбец */
+.bar {
+  width: 40px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  color: white;
+  padding-bottom: 3px;
+}
+
+.bar1 {
+  width: 82px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  color: white;
+  padding-bottom: 3px;
+}
+
+.bar-gen {
+  width: 70px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  color: white;
+  padding-bottom: 3px;
+}
+
+
+
+.count {
+  padding: 0;
+position: absolute;
+top: -28px;
+left: 14%;
+color: black;
+font-size: 19px;
+}
+
+.count1 {
+  padding: 0;
+position: absolute;
+top: -28px;
+left: 30%;
+color: black;
+font-size: 21px;
+}
+
+
+/* Цвета */
+.bar-2024 {
+  background: #b0b7c3;
+}
+
+.bar-2025 {
+  background: #2F80ED;
+}
+
+/* Подписи */
+.group span {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Легенда */
+.legend {
+  padding: 0;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  align-self: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.legend span {
+  padding: 0;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+}
+
+.l2024 {
+  background: #b0b7c3;
+}
+
+.l2025 {
+  background: #2F80ED;
+}
+
+.maps_container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.maps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.maps_title {
+padding: 0;
+font-size: 25px;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url('map.png') no-repeat center/contain;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+/* Общий стиль heatmap */
+.heat {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle,
+    rgba(255,0,0,0.8) 0%,
+    rgba(255,0,0,0.4) 40%,
+    rgba(255,0,0,0.2) 70%,
+    transparent 100%);
+}
+
+/* ЦЕНТР — максимальная нагрузка */
+.center {
+  width: 70px;
+  height: 70px;
+  top: 200px;
+  left: 185px;
+}
+
+/* ШМР */
+.east {
+  width: 70px;
+  height: 70px;
+  top: 190px;
+  left: 230px;
+}
+
+/* ГМР */
+.north {
+  width: 60px;
+  height: 60px;
+  top: 300px;
+  left: 385px;
+}
+
+/*КМР*/
+.west {
+  width: 70px;
+  height: 70px;
+  top: 210px;
+  left: 395px;
+}
+
+/* СМР */
+.south {
+  width: 70px;
+  height: 70px;
+  top: 125px;
+  left: 95px;
+}
+
+.pmr {
+  width: 80px;
+  height: 80px;
+  top: 258px;
+  left: 450px;
+}
+
+/* МОСТ / ВЫЕЗД (Тургеневский и др.) 
+.bridge {
+  width: 130px;
+  height: 130px;
+  top: 260px;
+  left: 270px;
+}*/
+
+.container-req {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.card-map {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  
+}
+
+.card-map_cont {
+  display: flex;
+  gap: 30px;
+  
+}
+
+.card-map h3 {
+  font-size: 27px;
+  
+}
+
+.card-map_cont h4 {
+  font-size: 25px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 6px 6px 8px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+

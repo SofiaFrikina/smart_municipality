@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Карта</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <h2>🏛 Умный Муниципалитет</h2>
+    <ul>
+      <li><a href="index.html">Дашборд</a></li>
+      <li><a href="kpi.html">KPI</a></li>
+      <li><a href="requests.html">Обращения</a></li>
+      <li><a href="map.html" class="active">Карта</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h1>Тепловые карты</h1>
+    </div>
+
+    <div class="filter-bar">
+  <label for="yearSelect" style="font-size: 25px; font-weight: 600;">Год:</label>
+  <select id="yearSelect">
+    <option value="all">2026</option>
+    <option value="2024">Все</option>
+    <option value="2025">2024</option>
+    <option value="2026">2025</option>
+  </select>
+</div>
+
+
+<div class="card-map">
+        <h3>ТОП Микрорайонов по проблемам</h3>
+        <div class="card-map_cont">
+          <h4>ШМР</h4>
+          <h4>КМР</h4>
+          <h4>ГМР</h4>
+        </div>
+      </div>
+
+<div class="maps_container">
+<div class="maps">
+  <h2 class="maps_title">Пробки</h3>
+<div class="map">
+<img class="map" src="./image/mapKrd.jpg"/>
+  <div class="heat center"></div>
+  <div class="heat east"></div>
+  <div class="heat north"></div>
+  <div class="heat west"></div>
+  <div class="heat south"></div>
+</div>
+</div>
+
+
+<div class="maps">
+  <h2 class="maps_title">Качество дорог</h3>
+<div class="map">
+<img class="map" src="./image/mapKrd.jpg"/>
+  <div class="heat east"></div>
+  <div class="heat north"></div>
+  <div class="heat west"></div>
+  <div class="heat pmr"></div>
+</div>
+</div>
+
+
+<div class="maps">
+  <h2 class="maps_title">Перенаселение ЖК</h3>
+<div class="map">
+<img class="map" src="./image/mapKrd.jpg"/>
+  <div class="heat east"></div>
+  <div class="heat north"></div>
+  <div class="heat west"></div>
+  <div class="heat south"></div>
+</div>
+</div>
+</div>
+
+
+  
+
+
+
+  </main>
+
+</div>
+</body>
+</html>

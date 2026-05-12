@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Municipality Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+  <h2>🏛 Умный Муниципалитет</h2>
+  <ul>
+    <li><a href="index.html" class="active">Дашборд</a></li>
+    <li><a href="kpi.html">KPI</a></li>
+    <li><a href="requests.html">Обращения</a></li>
+    <li><a href="map.html">Карта</a></li>
+  </ul>
+</aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Topbar -->
+    <div class="topbar-gen">
+      <div class="user" style="cursor: pointer; font-size: 18px;">👤 Личный кабинет</div>
+    </div>
+
+    <div class="filters">
+      <div class="filter-bar">
+  <label for="yearSelect" style="font-size: 25px; font-weight: 600;">Регион</label>
+  <select id="yearSelect">
+    <option value="all">Краснодарский край</option>
+    <option value="2024">Москва</option>
+    <option value="2025">Санкт-Петербург</option>
+    <option value="2026">Ставропольский край</option>
+  </select>
+  </div>
+  <div class="filter-bar"><label for="yearSelect" style="font-size: 25px; font-weight: 600;">Город</label>
+  <select id="yearSelect">
+    <option value="all">Краснодар</option>
+    <option value="2024">Сочи</option>
+    <option value="2025">Геленджик</option>
+    <option value="2026">Новороссийск</option>
+  </select></div>
+</div>
+    
+    
+
+    <!-- KPI Cards -->
+    <div class="cards">
+      <!-- Индекс эффективности -->
+    <div class="chart1">
+      <h3>Эффективность ОМСУ</h3>
+  <div class="bar-chart">
+    <div class="group">
+      <div class="bars">
+        <div class="bar1" style="height:96%; background-color: rgba(0, 100, 0, .5);"><p class="count1">96%</p></div>
+      </div>
+      <span style="font-weight: 600; font-size: 15px;">2024</span>
+    </div>
+
+    <div class="group">
+      <div class="bars">
+        <div class="bar1" style="height:79%;background-color: rgba(139, 0, 0, .5);"><p class="count1">79%</p></div>
+      </div>
+      <span style="font-weight: 600; font-size: 15px;">2025</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- KPI-показатель 1 место -->
+    <div class="chart1">
+      <h3>KPI 1 место</h3>
+  <div class="bar-chart">
+
+    <div class="group">
+      <div class="bars">
+        <div class="bar1" style="height:20%;background-color: rgba(255, 140, 0, .8);"><p class="count1">20%</p></div>
+      </div>
+      <span>ЖКХ</span>
+      <span style="font-weight: 600; font-size: 15px;">2024</span>
+    </div>
+
+    <div class="group">
+      <div class="bars">
+        <div class="bar1" style="height:15%;background-color: rgba(205, 133, 63, .9);"><p class="count1">15%</p></div>
+      </div>
+      <span>Экономика</span>
+      <span style="font-weight: 600;font-size: 15px;">2025</span>
+    </div>
+
+  </div>
+</div>
+
+<div class="chart2">
+<h3>Динамика KPI-показателей</h3>
+  <div class="bar-chart">
+
+    <!-- Экономика -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:18%"><p class="count">18%</p></div>
+        <div class="bar bar-2025" style="height:15%"><p class="count">15%</p></div>
+      </div>
+      <span>Экономика</span>
+    </div>
+
+    <!-- Дошкольное -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:7%"><p class="count">7%</p></div>
+        <div class="bar bar-2025" style="height:12%"><p class="count">12%</p></div>
+      </div>
+      <span>Дошк. обр.</span>
+    </div>
+
+    <!-- Образование -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:14%"><p class="count">14%</p></div>
+        <div class="bar bar-2025" style="height:11%"><p class="count">11%</p></div>
+      </div>
+      <span>Общее обр.</span>
+    </div>
+
+    <!-- Культура -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:9%"><p class="count">9%</p></div>
+        <div class="bar bar-2025" style="height:11%"><p class="count">11%</p></div>
+      </div>
+      <span>Культура</span>
+    </div>
+
+    <!-- Спорт -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:5%"><p class="count">5%</p></div>
+        <div class="bar bar-2025" style="height:5%"><p class="count">5%</p></div>
+      </div>
+      <span>Спорт</span>
+    </div>
+
+    <!-- Строительство -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:7%"><p class="count">7%</p></div>
+        <div class="bar bar-2025" style="height:4%"><p class="count">4%</p></div>
+      </div>
+      <span>Строит.</span>
+    </div>
+
+    <!-- ЖКХ -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:20%"><p class="count">20%</p></div>
+        <div class="bar bar-2025" style="height:13%"><p class="count">13%</p></div>
+      </div>
+      <span>ЖКХ</span>
+    </div>
+
+    <!-- Управление -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:8%"><p class="count">8%</p></div>
+        <div class="bar bar-2025" style="height:3%"><p class="count">3%</p></div>
+      </div>
+      <span>Упр.</span>
+    </div>
+
+    <!-- Энергия -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:7%"><p class="count">7%</p></div>
+        <div class="bar bar-2025" style="height:5%"><p class="count">5%</p></div>
+      </div>
+      <span>Энергия</span>
+    </div>
+
+  </div>
+
+  <!-- Легенда -->
+  <div class="legend">
+    <span class="l2024"></span> 2024
+    <span class="l2025"></span> 2025
+  </div>
+
+</div>
+    </div>
+
+    <!-- ОБРАЩЕНИЯ Cards -->
+    <div class="cards">
+      <!-- Индекс эффективности -->
+    <div class="chart1">
+      <h3>Обращения на 1000 чел. населения</h3>
+  <div class="bar-chart">
+    <div class="group">
+      <div class="bars">
+        <div class="bar-gen" style="height:53%; background-color: rgba(60, 123, 83, 0.6);"><p class="count1">40</p></div>
+      </div>
+      <span style="font-weight: 600; font-size: 15px;">2024</span>
+    </div>
+
+    <div class="group">
+      <div class="bars">
+        <div class="bar-gen" style="height:47%;background-color: rgba(60, 123, 83, 0.6);"><p class="count1">36</p></div>
+      </div>
+      <span style="font-weight: 600; font-size: 15px;">2025</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- KPI-показатель 1 место -->
+    <div class="chart1">
+      <h3>Решенные проблемы</h3>
+  <div class="bar-chart">
+    <div class="group">
+      <div class="bars">
+        <div class="bar-gen" style="height:27.2%; background-color: rgba(223, 149, 46, 0.6);"><p class="count1">27%</p></div>
+      </div>
+      <span style="font-weight: 600; font-size: 15px;">2024</span>
+    </div>
+
+    <div class="group">
+      <div class="bars">
+        <div class="bar-gen" style="height:27.2%;background-color: rgba(223, 149, 46, 0.6);"><p class="count1">27%</p></div>
+      </div>
+      <span style="font-weight: 600; font-size: 15px;">2025</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+  <table class="rating-table-gen">
+    <tr>
+      <th>ТОП рейтинг</th>
+      <th colspan="2">Категория обращений</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>2024</th>
+      <th>2025</th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>Комм. хоз-во и ТЭК</td>
+      <td>Комм. хоз-во и ТЭК</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>Жил. хоз-во</td>
+      <td>Транспорт и дороги</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Транспорт и дороги</td>
+      <td>Жил. хоз-во</td>
+    </tr>
+
+    
+  </table>
+  
+
+<div class="chart3">
+<h3>Доля обращений по категориям</h3>
+  <div class="bar-chart">
+
+    <!-- Экономика -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:26%"><p class="count">26%</p></div>
+        <div class="bar bar-2025" style="height:15%"><p class="count">15%</p></div>
+      </div>
+      <span>КХ и ТЭК</span>
+    </div>
+
+    <!-- Дошкольное -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:16%"><p class="count">16%</p></div>
+        <div class="bar bar-2025" style="height:12%"><p class="count">11%</p></div>
+      </div>
+      <span>ЖК</span>
+    </div>
+
+    <!-- Образование -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:21%"><p class="count">21%</p></div>
+        <div class="bar bar-2025" style="height:11%"><p class="count">10%</p></div>
+      </div>
+      <span>Транспорт</span>
+    </div>
+
+    <!-- Культура -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:7%"><p class="count">7%</p></div>
+        <div class="bar bar-2025" style="height:5%"><p class="count">5%</p></div>
+      </div>
+      <span>Мун.собственность</span>
+    </div>
+
+    <!-- Спорт -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:13%"><p class="count">13%</p></div>
+        <div class="bar bar-2025" style="height:5%"><p class="count">3%</p></div>
+      </div>
+      <span>Архитектура</span>
+    </div>
+
+    <!-- Строительство -->
+    <div class="group">
+      <div class="bars">
+        <div class="bar bar-2024" style="height:5%"><p class="count">5%</p></div>
+        <div class="bar bar-2025" style="height:4%"><p class="count">3%</p></div>
+      </div>
+      <span>Мун.контроль</span>
+    </div>
+
+    
+
+  </div>
+
+  <!-- Легенда -->
+  <div class="legend">
+    <span class="l2024"></span> 2024
+    <span class="l2025"></span> 2025
+  </div>
+
+</div>
+    </div>
+
+
+    
+
+    
+
+  </main>
+
+</div>
+</div>
+</body>
+</html>
